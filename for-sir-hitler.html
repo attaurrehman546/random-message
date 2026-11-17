@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Lucky Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #ffdee9, #b5fffc);
+      padding-top: 100px;
+    }
+    #message-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="message-box">
+    <h1>🔮 Your Lucky Message</h1>
+    <p id="lucky-message">Loading...</p>
+  </div>
+
+  <script>
+    const messages = [
+      "🌟 Today is your day to shine!",
+      "🍀 A surprise is coming your way!",
+      "🔥 Success is around the corner!",
+      "🌈 A colorful moment awaits you!",
+      "✨ Trust your instincts today.",
+      "🎯 Stay focused — you're close!",
+      "🎉 Something fun is about to happen!",
+      "💼 Your hard work will pay off soon!",
+      "💖 A kind gesture will brighten your day.",
+      "🌞 Embrace the positive energy around you!",
+      "🌙 Reflect on your achievements tonight.",
+      "🌻 A new opportunity is on the horizon.",
+      "🎵 Let music lift your spirits today.",
+      "📚 Knowledge will lead you to success.",
+      "🛤️ A journey awaits you — take the first step.",
+      "🌊 Go with the flow and enjoy the ride.",
+      "🕊️ Peace and calm will find you today.",
+      "💡 A bright idea will come to you soon.",
+      "🎨 Creativity will bring you joy today.",
+      "🌟 Believe in yourself and great things will happen.",
+      "🌺 A beautiful moment is just around the corner.",
+      "🌌 The universe has something special for you.",
+      "🌟 Your positive energy will attract good things.",
+      "🌞 A sunny day is ahead — enjoy it!",
+      "🌈 Embrace the colors of life today.",
+      "🌟 Your dreams are within reach — keep going!",
+      "🌻 A fresh start is on the way.",
+      "🌊 Let the waves of change guide you.",
+      "🌙 Tonight, reflect and recharge for tomorrow.",
+      "🌟 Your efforts will be rewarded soon.",
+      "🌞 A bright future is ahead — stay optimistic.",
+      "🌈 Happiness is coming your way — be ready!",
+      "🌟 Your journey is unique — embrace it fully.",
+      "🌺 A moment of joy will brighten your day."
+      ];
+
+    const currentHour = new Date().getHours();
+    const index = currentHour % messages.length;
+
+    document.getElementById("lucky-message").textContent = messages[index];
+  </script>
+
+</body>
+</html>
